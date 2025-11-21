@@ -1,4 +1,4 @@
-# ProtFPreDTI: A Protein Feature-Based Predictor for Drug-Target Interaction
+# KPRMKDTI: A Framework for Predicting Drug-Target Interactions Integrating Feature Extraction from Large Language Models and RBMO-Based Optimal Feature Selection
 
 ## Table of Contents
 
@@ -10,7 +10,7 @@
 
 ## About The Project
 
-**ProtFPreDTI** is a computational model designed to predict potential interactions between drugs and protein targets. 
+**KPRMKDTI** is a computational model designed to predict potential interactions between drugs and protein targets. 
 
 This project provides a GUI integrated with models, which can preprocess and predict data in real time.
 
@@ -20,9 +20,9 @@ To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
-This project requires Python 3.8 or later. The necessary Python packages can be installed via `pip` using the provided `requirements.txt` file.
+This project requires Python 3.12 or later. The necessary Python packages can be installed via `pip` using the provided `requirements.txt` file.
 
-* **Python 3.8+**
+* **Python 3.12+**
 * **pip**
 
 ### Environment Configuration
@@ -30,8 +30,8 @@ This project requires Python 3.8 or later. The necessary Python packages can be 
 1. **Clone the repository:**
 
    ```sh
-   git clone [https://github.com/flying-peanut/ProtFPreDTI.git]
-   cd ProtFPreDTI
+   git clone [https://github.com/flying-peanut/KPRMKDTI.git]
+   cd KPRMKDTI
    ```
 
 2. **Install the required packages:**
@@ -71,8 +71,7 @@ python main.py
 ## Introduction to the document
 
 - Dataset: stores the original data
-- Results: stores the results predicted by the model
-- Saved_models: stores the already trained model, which can be directly used for prediction when the code is reproduced
+- checkpoints: stores the already trained model, which can be directly used for prediction when the code is reproduced
 - lib: stores the mol2vec model
 - features.py and helpers.py: The code for drug feature extraction using the mol2vec model
 - main.py: A GUI integrated with the model
