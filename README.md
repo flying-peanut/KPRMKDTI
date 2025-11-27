@@ -5,7 +5,7 @@
 - [About The Project](#about-the-project)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+  - [Environment Configuration](#Environment Configuration)
 - [Usage](#usage)
 
 ## About The Project
