@@ -10,7 +10,8 @@
 
 ## About The Project
 
-**KPRMKDTI** is a highly accurate model for predicting drug-target interactions.\n
+**KPRMKDTI** is a highly accurate model for predicting drug-target interactions.
+****
 This work provides an online prediction platform that relevant researchers can use. The platform is: **http://www.kprmkdti.com**.
 
 ## Getting Started
