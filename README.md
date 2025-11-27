@@ -5,7 +5,7 @@
 - [About The Project](#about-the-project)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Environment Configuration](#EnvironmentConfiguration)
+  - [Configuration](#Configuration)
 - [Usage](#usage)
 
 ## About The Project
@@ -24,7 +24,7 @@ This project requires Python 3.12 or later. The necessary Python packages can be
 * **Python 3.12+**
 * **pip**
 
-### Environment Configuration
+### Configuration
 
 1. **Clone the repository:**
 
