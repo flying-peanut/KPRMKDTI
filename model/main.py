@@ -65,7 +65,6 @@ def Cross_verification(X, y, device, batch_size):
             name="KKAN",
             version=f"fold_{fold_idx}"
         )
-        # 训练配置
         trainer = pl.Trainer(
             max_epochs=200,
             accelerator='gpu',
@@ -87,11 +86,7 @@ def Cross_verification(X, y, device, batch_size):
                 )
             ]
         )
-        
-        # 训练与验证
         trainer.fit(model, train_loader, val_loader)
-        
-        # 记录最佳结果
         accuracy_scores.append(trainer.logged_metrics['val_acc'].item())
         precision_scores.append(trainer.logged_metrics['val_pre'].item())
         recall_scores.append(trainer.logged_metrics['val_re'].item())
@@ -104,11 +99,10 @@ def Cross_verification(X, y, device, batch_size):
 
 
 def Independent_test(pos_weight_list, test_loader, device):
-    
     for i in range(5):
         pos_weight = torch.tensor([pos_weight_list[i]], dtype=torch.float32).to(device)
         criterion = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
-        #初始化新模型
+
         lightning_model = KPRMKDTI.load_from_checkpoint(f'./checkpoints/fold_{i + 1}/best_model.ckpt', criterion = criterion)
         model = lightning_model.to(device)
         model.eval()
@@ -116,7 +110,7 @@ def Independent_test(pos_weight_list, test_loader, device):
         predictions = []
         all_labels = []
             
-        with torch.no_grad():# 此处不需要梯度计算
+        with torch.no_grad():
             for batch in test_loader:
                 X, y = batch
                 scores = model(X)
@@ -134,9 +128,7 @@ def Independent_test(pos_weight_list, test_loader, device):
 
 def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    set_random_seed(47)
     batch_size = 32
-    
     # drug_path = './dataset/new_featurized/k_bert'
     # target_path = './dataset/new_featurized/boruta'
     # drug_cols = [f'k_bert_{i}' for i in range(1, 769)]
@@ -162,3 +154,4 @@ if __name__ == "__main__":
     main()
 
   
+
