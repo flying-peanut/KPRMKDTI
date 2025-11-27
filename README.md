@@ -30,7 +30,7 @@ This project requires Python 3.12 or later. The necessary Python packages can be
 
    ```sh
    git clone [https://github.com/flying-peanut/KPRMKDTI.git]
-   cd ProtFPreDTI
+   cd KPRMKDTI
    ```
 
 2. **Install the required packages:**
@@ -62,7 +62,7 @@ Once the environment is set up, you can use the model for predictions.
    -   Ensure your drug sequences are in SMILES format.
    -   Prepare a CSV file containing smiles sequences, target sequences, and labels.
 
-**2. Run a prediction:**
+**2. Train the model:**
 
    ```sh
 python main.py
