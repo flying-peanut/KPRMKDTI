@@ -69,7 +69,7 @@ python main.py
    ```
 ## Introduction to the document
 
-- Dataset: stores the original data
+- dataset: stores the original data
 - model: includes the described model structure
 - trained_model: stores the trained K-BERT model
 - utils: stores feature extraction methods, feature selection methods and basic data processing methods
