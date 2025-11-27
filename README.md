@@ -45,6 +45,7 @@ This project requires Python 3.12 or later. The necessary Python packages can be
    * `pytorch`
    * `numpy`
    * `pandas`
+   * `pytorch_lightning`
    * `scikit-learn`
    * `rdkit-pypi` 
    * `joblib` 
